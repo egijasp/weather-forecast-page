@@ -1,16 +1,17 @@
 # Weather Forecast Page
 
 ---
+### Requirements
+
+[HERE](./src/assets/images/agdir-homework.pdf)
+
+---
 
 ### Visit
 
 You can try it out: https://weather-forecast-app-egija.netlify.app/home
 
----
-
-### Requirements
-
-[HERE](./src/assets/images/agdir-homework.pdf)
+<img src="./src/assets/gif/Animation.gif" alt="gif">
 
 ---
 

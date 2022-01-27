@@ -29,15 +29,15 @@
                 placeholder="Latitude"
               >
               <mat-error
-                *ngIf="weatherForecastForm.get('latitude')?.touched && weatherForecastForm.get('latitude')?.hasError('required')"
+                *ngIf="weatherForecastForm.get('latitude')?.hasError('required')"
               >
                 This field is required.
               </mat-error>
-              <mat-error *ngIf="weatherForecastForm.get('latitude')?.touched && weatherForecastForm.get('latitude')?.hasError('max')"
+              <mat-error *ngIf="weatherForecastForm.get('latitude')?.hasError('max')"
               >
                 Latitude cannot be more than 90
               </mat-error>
-              <mat-error *ngIf="weatherForecastForm.get('latitude')?.touched && weatherForecastForm.get('latitude')?.hasError('min')">
+              <mat-error *ngIf="weatherForecastForm.get('latitude')?.hasError('min')">
                 Latitude cannot be less than -90
               </mat-error>
             </mat-form-field>
@@ -51,14 +51,14 @@
                 placeholder="Longitude"
               >
               <mat-error
-                *ngIf="weatherForecastForm.get('longitude')?.touched && weatherForecastForm.get('longitude')?.hasError('required')"
+                *ngIf="weatherForecastForm.get('longitude')?.hasError('required')"
               >
                 This field is required.
               </mat-error>
-              <mat-error *ngIf="weatherForecastForm.get('longitude')?.touched && weatherForecastForm.get('longitude')?.hasError('max')">
+              <mat-error *ngIf="weatherForecastForm.get('longitude')?.hasError('max')">
                 Longitude cannot be more than 180
               </mat-error>
-              <mat-error *ngIf="weatherForecastForm.get('longitude')?.touched && weatherForecastForm.get('longitude')?.hasError('min')">
+              <mat-error *ngIf="weatherForecastForm.get('longitude')?.hasError('min')">
                 Longitude cannot be less than -180
               </mat-error>
             </mat-form-field>
