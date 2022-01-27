@@ -17,6 +17,8 @@ export class WeatherForecastComponent implements OnInit, OnDestroy {
   @ViewChild(MatSort)
   sort!: MatSort;
 
+  weatherData: WeatherData[] = [];
+
   weatherForecastForm: FormGroup = new FormGroup({});
   isLoading: boolean = false;
   dataSource: MatTableDataSource<WeatherData>;
@@ -59,16 +61,14 @@ export class WeatherForecastComponent implements OnInit, OnDestroy {
       const lat = this.weatherForecastForm.value.latitude;
 
       this.weatherSubscription = this.WeatherService.getWeatherForecast(lat, lon).subscribe((res) => {
-        console.log(res)
-        const weatherData: WeatherData[] = [];
         res.timeseries.map((item: Weather) => {
-          weatherData.push({
+          this.weatherData.push({
             time: item.time,
-            air_temperature: item.data.instant.details.air_temperature.toString(),
-            relative_humidity: item.data.instant.details.relative_humidity.toString(),
+            air_temperature: item.data.instant.details.air_temperature,
+            relative_humidity: item.data.instant.details.relative_humidity,
           })
         })
-          this.dataSource.data = weatherData;
+          this.dataSource.data = this.weatherData;
         this.dataSource.sort = this.sort;
         this.dataSource.paginator = this.paginator;
         this.isLoading = false;

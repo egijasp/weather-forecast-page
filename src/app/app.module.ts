@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './app/pages/home/home.component';
@@ -8,7 +7,6 @@ import { WeatherForecastComponent } from './app/pages/weather-forecast/weather-f
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {ReactiveFormsModule} from "@angular/forms";
 import {MatFormFieldModule} from "@angular/material/form-field";
-import { WeatherForecastTableComponent } from './app/pages/weather-forecast/weather-forecast-table/weather-forecast-table.component';
 import {HttpClientModule} from "@angular/common/http";
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import {MatButtonModule} from "@angular/material/button";
@@ -22,7 +20,6 @@ import {MatSortModule} from "@angular/material/sort";
     AppComponent,
     HomeComponent,
     WeatherForecastComponent,
-    WeatherForecastTableComponent
   ],
   imports: [
     BrowserModule,

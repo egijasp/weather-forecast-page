@@ -26,6 +26,6 @@ export interface WeatherApiData {
 
   export interface WeatherData {
     time: string,
-    air_temperature: string,
-    relative_humidity: string,
+    air_temperature: number,
+    relative_humidity: number,
   }
