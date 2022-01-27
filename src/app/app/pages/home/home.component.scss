@@ -1,0 +1,26 @@
+.landing-page {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.landing-page__logo-wrapper {
+  cursor: pointer;
+  padding: 20px;
+  transition: all 1s ease-in-out;
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transform: scale(1.2);
+  }
+}
+
+.landing-page__logo {
+  max-width: 20vw;
+  width: 100%;
+  min-width: 150px;
+
+
+}
