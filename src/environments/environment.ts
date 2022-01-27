@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'https://8l526ngysb.execute-api.eu-west-1.amazonaws.com/'
+  baseUrl: 'https://8l526ngysb.execute-api.eu-west-1.amazonaws.com/',
 };
 
 /*
