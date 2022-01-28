@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { GeolocationService } from '@ng-web-apis/geolocation';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Weather, WeatherData } from '../../shared/models/weather.model';
+import { WeatherData } from '../../shared/models/weather.model';
 import { WeatherService } from '../../shared/services/weather.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { Subscription, take } from 'rxjs';
