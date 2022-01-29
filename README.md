@@ -9,9 +9,9 @@
 
 ### Visit
 
-You can try it out: https://weather-forecast-app-egija.netlify.app/home
+You can try it out: https://weather-forecast-app-angular.netlify.app/home
 
-<img src="./src/assets/gif/Animation.gif" alt="gif">
+<img src="./src/weather-forecast.gif" alt="gif">
 
 ---
 
