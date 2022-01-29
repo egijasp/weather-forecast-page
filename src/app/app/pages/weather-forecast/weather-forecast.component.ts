@@ -16,18 +16,31 @@ import { MatSort } from '@angular/material/sort';
 })
 export class WeatherForecastComponent implements OnInit, OnDestroy {
 
-  @ViewChild(MatSort) sort!: MatSort;
-  @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatSort, { static: false})
+
+  set content(sort: MatSort) {
+    if (this.dataSource) {
+      this.dataSource.sort = sort;
+    }
+  }
+
+  @ViewChild(MatPaginator, { static: false })
+
+  set paginator(paginator: MatPaginator) {
+    if (this.dataSource) {
+      this.dataSource.paginator = paginator;
+    }
+  }
 
   weatherData: WeatherData[] = [];
 
   weatherForecastForm: FormGroup = new FormGroup({});
   isLoading: boolean = false;
   dataSource: MatTableDataSource<WeatherData>;
-  displayedColumns = ['time', 'temperature', 'humidity'];
+  displayedColumns = ['time', 'air_temperature', 'relative_humidity'];
 
-  weatherSubscription?: Subscription;
-  locationSubscription?: Subscription;
+  weatherSubscription = new Subscription();
+  locationSubscription = new Subscription();
 
   constructor(
     private fb: FormBuilder,
@@ -42,8 +55,8 @@ export class WeatherForecastComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.weatherSubscription?.unsubscribe();
-    this.locationSubscription?.unsubscribe();
+    this.weatherSubscription.unsubscribe();
+    this.locationSubscription.unsubscribe();
   }
 
   buildForm(): void {
@@ -77,8 +90,6 @@ export class WeatherForecastComponent implements OnInit, OnDestroy {
         })
       })
       this.dataSource.data = this.weatherData;
-      this.dataSource.sort = this.sort;
-      this.dataSource.paginator = this.paginator;
       this.isLoading = false;
     })
   }

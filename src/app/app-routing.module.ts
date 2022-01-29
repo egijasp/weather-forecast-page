@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {WeatherForecastComponent} from "./app/pages/weather-forecast/weather-forecast.component";
-import {HomeComponent} from "./app/pages/home/home.component";
+import { WeatherForecastComponent } from './app/pages/weather-forecast/weather-forecast.component';
+import { HomeComponent } from './app/pages/home/home.component';
 
 const routes: Routes = [
   {
     path: '',
     redirectTo: 'home',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
   {
     path: 'weather-forecast',
@@ -21,11 +21,11 @@ const routes: Routes = [
     path: '**',
     redirectTo: 'home',
     pathMatch: 'full',
-  }
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

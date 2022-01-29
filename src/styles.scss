@@ -1,16 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
-@import './assets/styles/reset';
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+@import "./assets/styles/reset";
 
-*{
+* {
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
-body{
+body {
   font-size: 18px;
   line-height: 1.8;
 }
 
-button, input {
+button,
+input {
   font-family: inherit;
+}
+
+.mat-sort-header-container {
+  justify-content: center;
 }
