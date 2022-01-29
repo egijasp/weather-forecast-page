@@ -19,7 +19,7 @@ You can try it out: https://weather-forecast-app-angular.netlify.app/home
 
 <img src="./src/assets/images/capture2.PNG" alt="" width="600">
 
-<img src="./src/assets/images/capture3.PNG" alt="" width="800">
+<img src="./src/assets/images/desktop.PNG" alt="" width="800">
 
 ---
 
